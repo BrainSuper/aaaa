@@ -12,7 +12,12 @@ $('.data-filter ul li').click(function () {
     });
     return false;
 });
-
+$('.selected-option').each(function(i) {
+    $(this).on('click', function(e) {
+      e.preventDefault();
+      $('.selected-option').eq(i).toggleClass('rotate');
+  });
+});
   
   
   

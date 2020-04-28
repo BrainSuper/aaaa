@@ -206,7 +206,12 @@ font-family: "ProximaNova", Arial, sans-serif;
         right: 15px;
         transform: translateY(50%);
         transform: rotate(45deg);
+        transition: transform 0.2s ease;
                 
+      }
+      .rotate:after {
+          top: 46%;
+          transform: rotate(224deg);
       }
       .selected-option .options {
           position: relative;
