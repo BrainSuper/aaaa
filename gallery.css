@@ -1,0 +1,323 @@
+/* TITLE */
+* {
+    box-sizing: border-box;
+}
+.gallery__title {
+    font-family: "ProximaNovaBold", Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.18;
+    text-align: center;
+    color: #ff4880;
+    margin-top: 87px;
+}
+.gallery__title span {
+    color: black;
+}
+.gallery__descr {
+    max-width: 410px;
+    margin: 0 auto;
+    margin-top: 13px;
+    text-align: center;
+    font-size: 17px;
+    font-family: "ProximaNova", Arial, sans-serif;
+    font-weight: normal;
+}
+.about__selfie {
+font-family: "ProximaNova", Arial, sans-serif;
+  font-size: 22px;
+  margin: 0 auto;
+  max-width: 278px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #101010;
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+}
+.about__selfie::before {
+    content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border: solid 2px #979797;
+        border-left: none;
+        border-top: none;
+        top: 30%;
+        right: -15px;
+        transform: translateY(50%);
+        transform: rotate(45deg);
+}
+.filter__by {
+    font-size: 18px;
+    font-family: "ProximaNovaBold", Arial, sans-serif;
+    font-weight: bold;
+    color: #393939;
+}
+.filter__desktop {
+    display: none;
+}
+
+
+/* Скрываем спиок */
+.faux-select {
+    display: none;
+}
+/* - ____________________________*/
+
+.data-filter{
+    padding: 15px 0;
+    margin-top: 22px;
+}
+.data-filter ul{
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+.data-filter ul li{
+    display: inline-block;
+    margin: 7px;
+    width: 120px;
+    height: 25px;
+    background: none;
+    border: 1px solid #979797;
+    border-radius: 20px;
+    padding: 0 5px 10px;
+    min-width: 40px;
+    cursor: pointer;
+    text-align: center;
+    color: #979797;
+    transition: 0,3s ease-in;
+    font-size: 16px;
+}
+.data-filter li.second {
+    width: 90px;
+}
+.data-filter ul li:hover{
+    border-color: #ff4880;
+    color: #ff4880;
+}
+
+.portfolio-item{
+    max-width: 920px;
+    margin: 0px auto;
+}
+.portfolio-item .item{
+    max-width: 440px;
+    float: left;
+    margin: 10px;
+}
+.portfolio-item .item img{
+    width: 100%;
+}
+/* .data-filter .active{
+    position: relative;
+} */
+.data-filter .active span{
+    position: relative;
+    padding: 0 7px;
+    color: #ff4880;
+}
+.data-filter li.active {
+    border-color: #ff4880;
+}
+.data-filter .active span::before{
+    content: url(img/active.svg);
+    display: block;
+    position: absolute;
+    left: -10px;
+}
+/* //////////// */
+@media(max-width:992px){
+    .portfolio-item{
+        max-width: 560px;
+    }
+    .portfolio-item .item{
+        max-width: 550px;
+    }
+    
+}
+/* ================= */
+
+@media screen and (max-width:768px){
+    .gallery__title {
+        font-size: 22px;
+    }
+
+
+
+}
+
+/* -------------- */
+@media screen and (max-width:576px){
+    .gallery__title {
+        margin: 0 auto;
+        margin-top: 87px;
+        max-width: 350px;
+        
+    }
+    .about__selfie {
+        margin-top: 20px;
+    }
+    .data-filter {
+        display: none;
+    }
+
+    .filter__desktop {
+        display: block;
+        margin-top: 18px;
+    }
+
+
+    /* Выпадающий список */
+    .faux-select {
+        list-style-type: none;
+        padding: 0;
+        color: #ff4880;
+        border: 0.1px solid  #ff4880;
+        cursor: pointer;
+        width: 184px;
+        display: flex;
+        position: relative;
+        z-index: 10;
+        outline: none; 
+      }
+    .faux-select li {
+        padding: 7px 0;
+        position: relative;
+        width: 100%;
+      }
+    .selected-option {
+       position: relative;
+      }
+      .selected-option:after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border: solid 1px #ff4880;
+        border-left: none;
+        border-top: none;
+        top: 30%;
+        right: 15px;
+        transform: translateY(50%);
+        transform: rotate(45deg);
+                
+      }
+      .selected-option .options {
+          position: relative;
+      }
+      /* .selected-option .options::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: calc(100% + 4px);
+        height: 100%;
+        border-left: 0.1px solid  #ff4880;
+        left: -2px;
+        
+      }
+      .selected-option .options::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: calc(100% + 4px);
+        height: 100%;
+        border-right: 0.1px solid  #ff4880;
+        right: -2px;
+      } */
+      .selected-option span{
+        padding: 0 38px;
+      }
+      .selected-option::before{
+        content: url(img/active.svg);
+        display: block;
+        position: absolute;
+        padding: 0 15px;
+      }
+      .options li a{
+          padding: 0 38px;
+      }
+      .active{
+          position: relative;
+      }
+      .active a{
+          padding: 0 38px;
+          color: #ff4880;
+      }
+      .active::before{
+        content: url(img/active.svg);
+        display: block;
+        position: absolute;
+      padding: 0 15px;
+      }
+      
+  .faux-select li .options {
+    display: flex;
+    width: 184px;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    /* outline: 1px solid  #ff4880; */
+    /* border: 1px solid  #ff4880; */
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    transition: all ease 0.25s;
+    border: 3px solid transparent;
+  }
+  .faux-select li .options li {
+    color: #979797;
+   
+    
+  }
+  .faux-select li .options li:last-of-type {
+    border-bottom: 0;
+  }
+  .faux-select li .options.open {
+    width: 184px;
+    /* border: 1px solid  #ff4880; */
+    border-radius: 0 0 5px 5px;
+    outline: none;
+    border-top: none;
+    background-color: #fff;
+    width: 100%;
+    max-height: 1000%;
+    border: 1px solid  #ff4880;
+    border-top: 3px solid transparent;
+    
+  }
+  .faux-select li .options.open li:hover  {
+    color: #ff4880;
+  }
+  
+
+
+
+    }
+
+
+
+@media screen and (max-width:320px) {
+    .data_filter_js{
+        display: none;
+
+    }
+    
+    
+      
+
+
+
+
+
+
+}
