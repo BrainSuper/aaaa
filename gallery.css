@@ -1,6 +1,20 @@
-/* TITLE */
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.wrapper {
+    max-width: 1320px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
 }
 .gallery__title {
     font-family: "ProximaNovaBold", Arial, sans-serif;
@@ -48,8 +62,12 @@ font-family: "ProximaNova", Arial, sans-serif;
         border-top: none;
         top: 30%;
         right: -15px;
-        transform: translateY(50%);
-        transform: rotate(45deg);
+        -webkit-transform: translateY(50%);
+            -ms-transform: translateY(50%);
+                transform: translateY(50%);
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
 }
 .filter__by {
     font-size: 18px;
@@ -73,10 +91,11 @@ font-family: "ProximaNova", Arial, sans-serif;
     margin-top: 22px;
 }
 .data-filter ul{
-    width: 100%;
+    width: 80%;
     list-style-type: none;
     text-align: center;
     padding: 0;
+    margin: 0 auto;
 }
 .data-filter ul li{
     display: inline-block;
@@ -91,6 +110,8 @@ font-family: "ProximaNova", Arial, sans-serif;
     cursor: pointer;
     text-align: center;
     color: #979797;
+    -webkit-transition: 0,3s ease-in;
+    -o-transition: 0,3s ease-in;
     transition: 0,3s ease-in;
     font-size: 16px;
 }
@@ -103,13 +124,13 @@ font-family: "ProximaNova", Arial, sans-serif;
 }
 
 .portfolio-item{
-    max-width: 920px;
+    width: 100%;
     margin: 0px auto;
 }
 .portfolio-item .item{
-    max-width: 440px;
+    max-width: 45%;
     float: left;
-    margin: 10px;
+    margin: 28px 24px;
 }
 .portfolio-item .item img{
     width: 100%;
@@ -170,6 +191,7 @@ font-family: "ProximaNova", Arial, sans-serif;
     .filter__desktop {
         display: block;
         margin-top: 18px;
+        margin-left: 25px;
     }
 
 
@@ -181,9 +203,12 @@ font-family: "ProximaNova", Arial, sans-serif;
         border: 0.1px solid  #ff4880;
         cursor: pointer;
         width: 184px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         position: relative;
         z-index: 10;
+        margin-left: 25px;
         outline: none; 
       }
     .faux-select li {
@@ -204,14 +229,24 @@ font-family: "ProximaNova", Arial, sans-serif;
         border-top: none;
         top: 30%;
         right: 15px;
-        transform: translateY(50%);
-        transform: rotate(45deg);
+        -webkit-transform: translateY(50%);
+            -ms-transform: translateY(50%);
+                transform: translateY(50%);
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+        -webkit-transition: -webkit-transform 0.2s ease;
+        transition: -webkit-transform 0.2s ease;
+        -o-transition: transform 0.2s ease;
         transition: transform 0.2s ease;
+        transition: transform 0.2s ease, -webkit-transform 0.2s ease;
                 
       }
       .rotate:after {
           top: 46%;
-          transform: rotate(224deg);
+          -webkit-transform: rotate(224deg);
+              -ms-transform: rotate(224deg);
+                  transform: rotate(224deg);
       }
       .selected-option .options {
           position: relative;
@@ -262,9 +297,14 @@ font-family: "ProximaNova", Arial, sans-serif;
       }
       
   .faux-select li .options {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 184px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     list-style-type: none;
     padding: 0;
     /* outline: 1px solid  #ff4880; */
@@ -276,6 +316,8 @@ font-family: "ProximaNova", Arial, sans-serif;
     overflow: hidden;
     top: 100%;
     left: 0;
+    -webkit-transition: all ease 0.25s;
+    -o-transition: all ease 0.25s;
     transition: all ease 0.25s;
     border: 3px solid transparent;
   }
@@ -316,13 +358,3 @@ font-family: "ProximaNova", Arial, sans-serif;
         display: none;
 
     }
-    
-    
-      
-
-
-
-
-
-
-}
